@@ -36,7 +36,7 @@ const genres = [
   
   router.delete('/:id', (req, res) => {
     const genre = genres.find(c => c.id === parseInt(req.params.id));
-    if (!genre) return res.status(404).send('The genre with the given ID was not found.');
+    if (!genre) return res.status(404).send('The genre with the given ID was not found');
   
     const index = genres.indexOf(genre);
     genres.splice(index, 1);
@@ -46,7 +46,7 @@ const genres = [
   
   router.get('/:id', (req, res) => {
     const genre = genres.find(c => c.id === parseInt(req.params.id));
-    if (!genre) return res.status(404).send('The genre with the given ID was not found.');
+    if (!genre) return res.status(404).send('The genre with the given ID was not found');
     res.send(genre);
   });
   
